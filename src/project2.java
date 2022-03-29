@@ -56,6 +56,10 @@ public class project2 {
         Thread.sleep(2000);
 
 
+        //returns the value
+        System.out.println(driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtTotal")).getAttribute("value"));
+
+
         // Enter Customer Name:
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
         String firstName = "";
@@ -123,7 +127,7 @@ public class project2 {
         state.add("Florida");
         ArrayList newState = new ArrayList();
 
-        int b = (int) (1 + Math.random() * city.size());
+        int b = (int) (1 + Math.random() * state.size());
         driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox4")).sendKeys(Keys.chord(state.get(b)));
         Thread.sleep(2000);
 
@@ -189,7 +193,7 @@ public class project2 {
         // Log out of the application:
         driver.findElement(By.id("ctl00_logout")).click();
         Thread.sleep(2000);
-        driver.quit();
+           driver.quit();
     }
 
    
